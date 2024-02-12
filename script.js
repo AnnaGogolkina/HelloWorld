@@ -40,19 +40,19 @@ alert (age);
 
 const user = {
     name:'Ann',
-    age:'20',
+    age: 20 ,
     isAdmin: true
     
 };
 
 user["city of residence"] =  'Saint-Petersburg';
 
-delete user ["city of residence"];
+delete user["city of residence"];
 
 user.age = 35;
 
-let info = prompt (`Какую информацию хотите узнать о пользовтаеле?`)
-alert ([user]);
+let info = prompt (`Какую информацию хотите узнать о пользовтеле?`)
+alert (user[info]);
 
 let userName = prompt(`Как Вас зовут?`)
 alert (`Привет, ${userName}!`)
