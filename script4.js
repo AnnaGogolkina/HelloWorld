@@ -26,17 +26,15 @@ for (let key in object) {
 let n = 1000;
 let m = 2;
 let num = 0;
-do (n / m)
-while (n % m < 50);
-num++;
-{
-  console.log(num);
+do {
+  n /= m // n = n / m
+  num++;
 }
+while (n >= 50);
+console.log(n);
+  console.log(num);
+
 
 let firstFriday = 5;
 for (let day = firstFriday; day < 31; day += 7)
   console.log(`Сегодня пятница, ${day} - число. Необходимо подготовить отчет`);
-
-  function sum() {
-    
-  }
