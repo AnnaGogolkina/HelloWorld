@@ -36,3 +36,7 @@ num++;
 let firstFriday = 5;
 for (let day = firstFriday; day < 31; day += 7)
   console.log(`Сегодня пятница, ${day} - число. Необходимо подготовить отчет`);
+
+  function sum() {
+    
+  }
