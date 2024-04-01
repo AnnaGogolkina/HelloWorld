@@ -186,6 +186,10 @@ body {
     }  
 }
 @media (max-width:375px){
+    .seasons {
+        padding-left:calc(50% - 350px);
+        padding-right:calc(50% - 350px);
+    }  
     .info__heading{
         font-size:32px;
         line-height:39px;
@@ -221,6 +225,11 @@ body {
 
     .info__heading{
         padding-top:0;
+    }
+
+    .btn2{
+        margin:0 auto;
+        display:block;
     }
 
 }
