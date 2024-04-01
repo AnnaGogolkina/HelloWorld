@@ -1,5 +1,5 @@
 function numbers(a, b) {
-    if (a>b) {
+    if (a > b) {
         return b;
     } 
     else {
@@ -17,7 +17,7 @@ function numer(c) {
 } 
  
 function quad(d) {
-    console.log(d**2)
+    console.log(d ** 2)
 }
 
 function howOld ()
@@ -38,7 +38,7 @@ function multNumbers(k , l) {
         return 'одно или оба значения не являются числом';    
     }
     else {
-        return k*l;
+        return k * l;
     }
 }
 
