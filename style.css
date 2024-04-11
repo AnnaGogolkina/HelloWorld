@@ -22,6 +22,7 @@ body {
     padding-right: calc(50% - 600px);
     padding-left: calc(50% - 600px);
     height:1024px;
+    
 }
 
 .info__heading {
@@ -146,12 +147,12 @@ body {
     align-items: flex-end;
 }
 
-//*.seasons_text{
+/*.seasons_text{
     background-image: url(./img/game\ 1.png);
     background-repeat: no-repeat;
     background-position: top 30% right;
     background-size: auto;
-}*//
+}*/
 
 @media (max-width:1024px){
     .cover,
@@ -186,6 +187,11 @@ body {
     }  
 }
 @media (max-width:375px){
+    .cover{
+        padding-top:238px;
+        height: 735px;
+        box-sizing: border-box;
+    }
     .seasons {
         padding-left:calc(50% - 350px);
         padding-right:calc(50% - 350px);
@@ -201,6 +207,7 @@ body {
         line-height:22px;
         text-align:center;
         max-width:343px;
+        margin-inline:auto;
     }
 
     .but{
@@ -230,6 +237,10 @@ body {
     .btn2{
         margin:0 auto;
         display:block;
+    }
+
+    .seasons_content {
+        justify-content: center;  
     }
 
 }
