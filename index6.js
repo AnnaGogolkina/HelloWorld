@@ -7,13 +7,13 @@ for(let i=0; i < numbers.length;i++){
 }
 
 //задание 2
-console.log = (numbers.indexOf(4));
+console.log(numbers.indexOf(4));
 
 //задание 3
-const num = [1, 3, 5, 10, 20];
-const joinedNum = num.join(' '); {
-    console.log(joinedNum);
-}
+const array = [1, 3, 5, 10, 20];
+const arrayJoin = array.join(' ');
+
+    console.log(arrayJoin);
 
 //задание 4
 const arr = []
@@ -28,9 +28,8 @@ const arr = []
 //задание5
 
 const numberOne = [1, 1, 1];
-numberOne.push(2, 2, 2) {
+numberOne.push(2, 2, 2);
     console.log(numberOne);
-}
 
 //задание 6
 const a = [9, 8, 7, "a", 6, 5].sort()
@@ -67,6 +66,7 @@ for(let i = 0; i < numers.length - 1; i++) {
 }
 
 //задание 11
+const  arrayEl = [];
 function squares(arrayEl) {
     return arrayEl.map((element) => element **2)
 }
@@ -92,6 +92,6 @@ console.log(arrayFloor);
 console.log(arrayNew);
 
 //задание 15
-const array =[...Array(6)].map((element) => Math.ceil(Math.random()*10));
-const sum = array.reduce((total, number) => total + number,0);
-console.log(sum/array.length);
+const mapArray =[...Array(6)].map((element) => Math.ceil(Math.random()*10));
+const sum = mapArray.reduce((total, number) => total + number,0);
+console.log(sum/mapArray.length);
