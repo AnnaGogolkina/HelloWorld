@@ -131,15 +131,18 @@ body {
     background-size: cover;
 }
 
-.season-img-mob{
+.season-img-mob,
+.fruits-img-mob{
     display:none;
 }
-.seasons {
+.seasons,
+.fruits {
     background: #000915;
     padding-bottom:243px;
 }
 
-.seasons_content {
+.seasons_content,
+.fruits__content {
     display:flex;
     flex-wrap:wrap;
     align-content: space-around;
@@ -156,7 +159,8 @@ body {
 
 @media (max-width:1024px){
     .cover,
-    .seasons {
+    .seasons,
+    .fruits {
         padding-left:calc(50% - 350px);
         padding-right:calc(50% - 350px);
     }
@@ -181,20 +185,27 @@ body {
         padding-bottom:64px;
     } 
     .cover,
-    .seasons {
+    .seasons,
+    .fruits {
         padding-left:calc(50% - 350px);
         padding-right:calc(50% - 350px);
     }  
 }
 @media (max-width:375px){
+    .fruits__text{
+        order:1;
+    }
     .cover{
         padding-top:238px;
         height: 735px;
         box-sizing: border-box;
     }
-    .seasons {
+    .seasons,
+    .fruits {
         padding-left:calc(50% - 350px);
         padding-right:calc(50% - 350px);
+        padding-bottom:136px;
+        
     }  
     .info__heading{
         font-size:32px;
@@ -220,10 +231,15 @@ body {
         max-width:343px;
     }
 
-    .season-img-mob{
+    .season-img-mob,
+    .fruits-img-mob{
         display:block;
     }
-    .season-img{
+    .fruits-img-mob{
+        order:2;
+    }
+    .season-img,
+    .fruits-img{
         display:none;
     }
     .seasons_text{
@@ -239,8 +255,10 @@ body {
         display:block;
     }
 
-    .seasons_content {
-        justify-content: center;  
+    .seasons_content,
+    .fruits__content {
+        justify-content: center; 
+        gap: 64px; 
     }
 
 }
