@@ -4,12 +4,11 @@ let strToUpperCase = str.toUpperCase();
 console.log(strToUpperCase);
 
 //задание 2
-const products = ['Хлеб Бородинский', 'Молоко Молочник', 'Коровка Молоко', 
+products.forEach((product) => {
+   const products = ['Хлеб Бородинский', 'Молоко Молочник', 'Коровка Молоко', 
 'Груша Конференция'];
 
 const search = 'молоко';
-
-products.forEach((product) => {
    if (product.toLowerCase().startsWith(search.toLowerCase())) {
       console.log(product);
    }
@@ -30,7 +29,7 @@ console.log(Math.max(52, 53, 49, 77, 21, 32));
 
 //задание 5
 function random() {
-   return Math.floor(Math.random() * 10);
+   return Math.floor(Math.random() * 9 + 1);
 }
 console.log(random());
 
@@ -49,10 +48,10 @@ console.log(functionRandom(12));
 
 //задание 7
 
-function gc(min, max) {
-   return Math.floor(Math.random() + (max - min + 1) + min);
+function getRandom(min, max) {
+   return Math.floor(Math.random() + (max - min + 1) * min);
 }
-console.log(gc(2, 50));
+console.log(getRandom(2, 50));
 
 //заданрие 8
 
@@ -61,7 +60,7 @@ console.log(dateNow);
 
 //задание 9 
 
-let currentDate = newDate();
+let currentDate = new Date();
 currentDate.setDate(currentDate.setDate() + 73)
 
 console.log(currentDate);
@@ -69,10 +68,10 @@ console.log(currentDate);
 //задание 10
 
 function getMyDate(fullDate) {
-   const months = ['Январь', 'Февраль','Март', 'Апрель', 'Май', 'Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+   const months = ['Января', 'Февраля','Марта', 'Апреля', 'Мая', 'Июня', 'Июля','Августа','Сентября','Октября','Ноября','Декабря'];
    const days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
    let myDate = new Date();
-
+   
    return `Дата: ${myDate.getDate()} ${months[myDate.getMonth()]} ${myDate.getFullYear()} - это ${days[myDate.getDay()]} Время: ${myDate.getHours()} ${myDate.getMinutes()} ${myDate.getSeconds()}`;
 
 }
@@ -82,19 +81,20 @@ console.log(getMyDate())
 //задание 11
 
 function fruitsRemember() {
+    
    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-   fruits.sort(() => Math.random - 0.5) 
+   fruits = fruits.sort(() => Math.random() - 0.5)
       alert(fruits);
    
    let answerFirst = prompt("Назовите первый фрукт из списка")
-   let answerSecond = prompt("назовите второй фрукт из списка")
+   let answerSecond = prompt("назовите последний фрукт из списка")
    
    
-   if ( !answerFirst || !answerSecond ||isNan(answerFirst) || isNaN(answerSecond)) {
+   if ( !answerFirst || !answerSecond) {
       alert ("Введите корректное значение");
-   } else if (answerFirst === fruits[0] && answerSecond === fruits[fruits.length -1]) {
+   } else if (answerFirst === fruits[0].toLowerCase() && answerSecond === fruits[fruits.length - 1].toLowerCase()) {
       alert ("Поздравляем! Вы угадали оба слова");
-   } else if (answerFirst === fruits[0] || answerSecond === fruits[fruits.length -1]) {
+   } else if (answerFirst === fruits[0].toLowerCase() || answerSecond === fruits[fruits.length - 1].toLowerCase()) {
       alert ("Вы были близки к правильному ответу");
    } else {
       alert ("К сожалению, Вы ответили неверно. Попробуйте еще раз");
